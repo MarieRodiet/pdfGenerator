@@ -1,0 +1,68 @@
+/***********************
+ PAGE
+   *********************************/
+  @page{
+     size: A4;
+     margin-top: 1cm;
+     margin-right: 30px;
+     margin-left: 30px;
+     margin-bottom: 50px;
+     /* the minimum number of lines of a paragraph that must be left at the bottom of a page */
+     orphans:4;
+     /* the minimum number of lines of a paragraph that must be left at the top of a page */
+     widows:2;
+ }
+
+
+ *{
+     font-size: 9pt;
+     font-family: 'Open Sans', sans-serif;
+ }
+
+ /***********************
+   HEADER
+   *********************************/
+ header {
+    padding-bottom: 0.3cm;
+ }
+
+.logo {
+  width: 5cm;
+}
+
+.emptyLogo{
+  width: 5cm;
+  height: 2cm;
+}
+
+.contact-container{
+    padding-bottom: 1.1cm;
+}
+
+ /***********************
+ CONTENT
+   *********************************/
+
+.salutions_container{
+    height: 120px;
+}
+
+.signature {
+    margin-top: 10px;
+    width: 70px;
+}
+
+ /***********************
+ FOOTER
+   *********************************/
+ .footer{
+   position: running(footer);
+ }
+
+ .basdepage{
+     width: 100%;
+     position: relative;
+
+ }
+
+

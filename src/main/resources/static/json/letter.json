@@ -1,0 +1,10 @@
+{
+  "showLogoAndFooter": true,
+  "imgOddPage": false,
+  "addressStamped": true,
+  "paginationStamped" :true,
+  "date" : "mercredi 20 décembre 2020",
+  "prefix": "Mr",
+  "name": "DOE JOHN",
+  "adress": ["1 RUE DE LA PAIX", "99999 SPECIMEN", "Paris 75000"]
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8" />
+		<link th:href="@{css/fonts.css}" rel="stylesheet" />
+		<link th:href="@{css/main.css}" rel="stylesheet"/>
+		<link th:href="@{css/letter.css}" rel="stylesheet"/>
+		<!-- if data.imgOddPage is true, images show up every odd pages starting at 1 -->
+		<link th:if="${data.imgOddPage}" th:href="@{css/oddPage.css}" rel="stylesheet"/>
+
+		<!-- if data.imgOddPage is false, images show up on every pages -->
+		<link th:if="${!data.imgOddPage}" th:href="@{css/evenPage.css}" rel="stylesheet"/>
+
+	</head>
+	<body>
+		<main size="A4" class="h-screen width-100">
+			<!-- *********************************
+           HEADER
+********************************* -->
+			<header class="text-left">
+				<img
+					th:if="${data.showLogoAndFooter}"
+					class="logo"
+					src="images/logo.jpg"
+					alt="logo"
+				/>
+				<div
+					th:unless="${data.showLogoAndFooter}"
+					class="emptyLogo"
+				></div>
+			</header>
+			<!-- *********************************
+            FOOTER
+  ********************************* -->
+			<footer class="footer pr-35">
+				<img
+					th:if="${data.showLogoAndFooter}"
+					class="basdepage"
+					src="images/footer.png"
+					alt="footer"
+				/>
+				<div
+					th:unless="${data.showLogoAndFooter}"
+					class="emptyFooter"
+				></div>
+			</footer>
+			<!-- *********************************
+          PAGE CONTENT
+********************************* -->
+			<p class="weight-700">Lorem Ipsum</p>
+			<section class="pt-10 width-40 float-left contact-container">
+				<p>Contact</p>
+				<p>Tél: 00 00 00 00 00</p>
+			</section>
+
+
+			<section class="pl-30 width-40 float-right"></section>
+
+
+
+			<section class="float-clear text-justify">
+				<p class="pb-25">Best city ever, le <span th:text="${data.date}"></span></p>
+				<p class="pb-15">Objet : De Finibus Bonorum et Malorum</p>
+				<div class="no-page-break">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend tortor eros,
+						id venenatis lacus ultrices in. Pellentesque habitant morbi tristique senectus et netus
+						et malesuada fames ac turpis egestas. Cras nec sapien est. Cras nec tortor velit. Nulla
+						viverra mattis metus, at lacinia ipsum pharetra id. Curabitur aliquet enim sapien, sed
+						ultricies tortor consequat quis. Aenean molestie diam erat, et facilisis odio faucibus
+						vel. Fusce in leo eget diam posuere pellentesque ac vitae nisl. Proin pellentesque turpis
+						efficitur, finibus est eu, elementum leo. Morbi neque ante, lacinia id sem vitae, sodales
+						efficitur purus. Sed vulputate et quam a auctor. Sed scelerisque, tellus pretium lobortis
+						posuere, nisl eros molestie metus, a placerat lorem sem interdum velit.
+					</p>
+				</div>
+				<div class="pt-15 no-page-break">
+					<p>
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum:
+					</p>
+					<ul>
+						<li>
+							- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+							ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						</li>
+						<li>
+							- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+							fugiat nulla pariatur. Excepteur sint occaecat .
+						</li>
+					</ul>
+				</div>
+				<p class="pt-10">
+					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+					laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+					architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+					sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+					voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+					amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+					labore et dolore magnam aliquam quaerat voluptatem.
+				</p>
+				<p class="pt-10">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+					sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+					id est laborum.
+				</p>
+				<p class="pt-10">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+					sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+					id est laborum.
+				</p>
+			</section>
+			<section class="float-clear text-justify">
+				<p class="pb-25">Best city ever, le <span th:text="${data.date}"></span></p>
+				<p class="pb-15">Objet : De Finibus Bonorum et Malorum</p>
+				<div class="no-page-break">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend tortor eros,
+						id venenatis lacus ultrices in. Pellentesque habitant morbi tristique senectus et netus
+						et malesuada fames ac turpis egestas. Cras nec sapien est. Cras nec tortor velit. Nulla
+						viverra mattis metus, at lacinia ipsum pharetra id. Curabitur aliquet enim sapien, sed
+						ultricies tortor consequat quis. Aenean molestie diam erat, et facilisis odio faucibus
+						vel. Fusce in leo eget diam posuere pellentesque ac vitae nisl. Proin pellentesque turpis
+						efficitur, finibus est eu, elementum leo. Morbi neque ante, lacinia id sem vitae, sodales
+						efficitur purus. Sed vulputate et quam a auctor. Sed scelerisque, tellus pretium lobortis
+						posuere, nisl eros molestie metus, a placerat lorem sem interdum velit.
+					</p>
+				</div>
+				<div class="pt-15 no-page-break">
+					<p>
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum:
+					</p>
+					<ul>
+						<li>
+							- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+							ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						</li>
+						<li>
+							- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+							fugiat nulla pariatur. Excepteur sint occaecat .
+						</li>
+					</ul>
+				</div>
+				<p class="pt-10">
+					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+					laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+					architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+					sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+					voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+					amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+					labore et dolore magnam aliquam quaerat voluptatem.
+				</p>
+				<p class="pt-10">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+					sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+					id est laborum.
+				</p>
+				<p class="pt-10">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+					sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+					id est laborum.
+				</p>
+			</section>
+			<section class="float-clear text-justify">
+				<p class="pb-25">Best city ever, le <span th:text="${data.date}"></span></p>
+				<p class="pb-15">Objet : De Finibus Bonorum et Malorum</p>
+				<div class="no-page-break">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend tortor eros,
+						id venenatis lacus ultrices in. Pellentesque habitant morbi tristique senectus et netus
+						et malesuada fames ac turpis egestas. Cras nec sapien est. Cras nec tortor velit. Nulla
+						viverra mattis metus, at lacinia ipsum pharetra id. Curabitur aliquet enim sapien, sed
+						ultricies tortor consequat quis. Aenean molestie diam erat, et facilisis odio faucibus
+						vel. Fusce in leo eget diam posuere pellentesque ac vitae nisl. Proin pellentesque turpis
+						efficitur, finibus est eu, elementum leo. Morbi neque ante, lacinia id sem vitae, sodales
+						efficitur purus. Sed vulputate et quam a auctor. Sed scelerisque, tellus pretium lobortis
+						posuere, nisl eros molestie metus, a placerat lorem sem interdum velit.
+					</p>
+				</div>
+				<div class="pt-15 no-page-break">
+					<p>
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum:
+					</p>
+					<ul>
+						<li>
+							- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+							ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						</li>
+						<li>
+							- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+							fugiat nulla pariatur. Excepteur sint occaecat .
+						</li>
+					</ul>
+				</div>
+				<p class="pt-10">
+					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+					laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+					architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+					sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+					voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+					amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+					labore et dolore magnam aliquam quaerat voluptatem.
+				</p>
+				<p class="pt-10">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+					sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+					id est laborum.
+				</p>
+				<p class="pt-10">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+					sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+					id est laborum.
+				</p>
+			</section>
+			<section class="float-clear text-justify">
+				<p class="pb-25">Best city ever, le <span th:text="${data.date}"></span></p>
+				<p class="pb-15">Objet : De Finibus Bonorum et Malorum</p>
+				<div class="no-page-break">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend tortor eros,
+						id venenatis lacus ultrices in. Pellentesque habitant morbi tristique senectus et netus
+						et malesuada fames ac turpis egestas. Cras nec sapien est. Cras nec tortor velit. Nulla
+						viverra mattis metus, at lacinia ipsum pharetra id. Curabitur aliquet enim sapien, sed
+						ultricies tortor consequat quis. Aenean molestie diam erat, et facilisis odio faucibus
+						vel. Fusce in leo eget diam posuere pellentesque ac vitae nisl. Proin pellentesque turpis
+						efficitur, finibus est eu, elementum leo. Morbi neque ante, lacinia id sem vitae, sodales
+						efficitur purus. Sed vulputate et quam a auctor. Sed scelerisque, tellus pretium lobortis
+						posuere, nisl eros molestie metus, a placerat lorem sem interdum velit.
+					</p>
+				</div>
+				<div class="pt-15 no-page-break">
+					<p>
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum:
+					</p>
+					<ul>
+						<li>
+							- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+							ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						</li>
+						<li>
+							- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+							fugiat nulla pariatur. Excepteur sint occaecat .
+						</li>
+					</ul>
+				</div>
+				<p class="pt-10">
+					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+					laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+					architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+					sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+					voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+					amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+					labore et dolore magnam aliquam quaerat voluptatem.
+				</p>
+				<p class="pt-10">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+					sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+					id est laborum.
+				</p>
+				<p class="pt-10">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+					sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+					id est laborum.
+				</p>
+			</section>
+			<section class="no-page-break text-justify pt-15 salutions_container">
+				<p>
+					Nam libero tempore, cum soluta nobis est eligendi.
+				</p>
+				<div class="pt-10 float-right width-30 text-left">
+					<p>Your friend</p>
+					<p>Kathy</p>
+					<img
+						class="signature"
+						src="images/signature.png"
+						alt="signature"
+					/>
+				</div>
+			</section>
+
+		</main>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+server:
+  port: 7890
+
+spring:
+  thymeleaf:
+    cache: false
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  trace:
+    http:
+      include: RESPONSE_HEADERS
+
+
+

@@ -1,0 +1,9 @@
+ @page :right {
+     @bottom-center {
+         content: element(footer);
+     }
+ }
+
+ @page :before @page:right{
+     margin-bottom: 4cm;
+ }
